@@ -1,3 +1,6 @@
+%% Disclaimer:
+% If this code works, good, if not, do not blame LittelMooMoo
+
 function data = SpeedKalmanFilter(t,v)
     data = struct();
     t = t(:);
