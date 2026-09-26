@@ -34,7 +34,7 @@ function data = SpeedKalmanFilter(t,v)
             + K * R * K.';
         data.predicted_accel(k) = x_after(2);
         data.filtered_speed(k) = x_after(1);
-        q = var(gradient(data.predicted_accel,t(2,:)).*dt(k))/dt(k);
+        q = var(gradient(data.predicted_accel,t(1:k)).*dt(k))/dt(k);
     end
 end
 
